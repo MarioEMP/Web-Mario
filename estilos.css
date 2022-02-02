@@ -1,0 +1,305 @@
+/* FONDO */
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#city {
+    width: 100%;
+    position: fixed;
+    z-index: -10;
+    margin-top: 300px;
+}
+
+.contenedor {
+    background: rgba(255, 255, 255, 0.911);
+}
+
+.titulo {
+    opacity: 0;
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    font-weight: normal;
+    padding-top: 70px;
+    margin-top: 0;
+    transition: 1000ms;
+}
+
+.mostrarArriba{
+    animation: mostrarArriba 1s;
+}
+
+@keyframes mostrarArriba {
+    0% {
+        transform: translateY(60px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.mostrarNav{
+    animation: mostrarNav 1s;
+}
+
+@keyframes mostrarNav {
+    0% {
+        transform: translateX(1000px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.mostrarIzquierda{
+    animation: mostrarIzquierda 1s;
+}
+
+@keyframes mostrarIzquierda {
+    0% {
+        transform: translateX(-1000px)
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* PRIMERA VISTA */
+
+header {
+    height: 100vh;
+}
+
+.marioimg {
+    padding-top: 10%;
+}
+
+#mariom {
+    border-radius: 50%;
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+
+#mariom:hover{
+    transition: 300ms;
+    box-shadow: 10px 10px 30px black;
+    transform: scale(1.1)
+}
+
+#mariom:not(:hover){
+    opacity: 0.4;
+}
+
+#mariom:active {
+    transform: scale(1.2)
+}
+
+
+#mariologo {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 20px 0 80px 0;
+    opacity: 0.9;
+}
+
+#mariologo:hover {
+    transition: 500ms;
+    filter: brightness(2);
+}
+
+
+li {
+    list-style: none;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#navegacion {
+    display: none;
+    color: white;
+    position: fixed;
+    font-size: 20px;
+    padding-left: 0;
+    width: 100%;
+    background: linear-gradient(rgb(220, 84, 84), rgb(245, 151, 96));
+    margin: 0;
+    z-index: 10;
+}
+
+#navegacion li:hover {
+    display: flex;
+    transition: 1000ms;
+    color: black;
+    background: blanchedalmond;
+}
+
+#navegacion li:active{
+    filter: brightness(7);
+}
+
+#navegacion a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* WHASAPP */
+
+#was {
+    background: none;
+    position: fixed;
+    top: 1%;
+    right: 10%;
+    z-index: 20;
+}
+
+#was img {
+    height: 40px;
+}
+
+/* SOBRE MI */
+
+
+#psobre{
+    text-align: center;
+    display: block;
+    padding: 0 30px 0 30px;
+}
+
+#curriculum {
+    display: flex;
+    justify-content: space-around;
+}
+
+#curriculum a {
+    text-decoration: none;
+    color: brown;
+}
+
+
+#cv{
+    width: 150px;
+    padding: 0;
+
+}
+
+#cv:hover{
+    transition: 200ms;
+    box-shadow: 10px 10px 30px black;
+    transform: scale(1.05)
+}
+
+
+/* SERVICIOS */
+
+#logosup{
+    padding: 40px;
+}
+
+.logos{
+    opacity: 0;
+    text-align: center;
+    border-color: black;
+    border-style:double;
+    margin: 20px 200px 0 200px;
+}
+
+.logos:hover{
+    box-shadow:0 0 15px 15px rgb(172, 172, 172);
+    background-color: rgb(255, 255, 255)
+}
+
+.logos img{
+    padding: 30px;
+    width: 100px;
+}
+
+
+.pconocimientos{
+    margin: auto;
+    text-align: left;
+    padding: 10px;
+}
+
+/* ¿POR QUÉ? */
+
+
+.servicios h4 {
+    font-size: 20px;
+    margin: 0%;
+}
+
+.servicios img {
+    border-radius: 50%;
+    float: right;
+}
+
+.servicios p {
+    height: 130px;
+}
+
+
+.pqcont {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.pq h5 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.pqcont img {
+    width: 60px;
+}
+
+.pq p {
+    font-size: 16px;
+    line-height: 30px; 
+}
+
+.pq {
+    width: 28%; 
+}
+
+/* CONTACTO */
+
+
+#tcontacto {
+    background: linear-gradient(rgba(84, 220, 168, 0.8),rgba(54, 204, 49, 0.8));
+    text-align: center;
+    padding: 30px 0 30px 0;
+}
+
+#tcontacto h3 {
+    font-size: 23px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.logosocial {
+    text-align: center;
+    margin: 0 20px 0 20px;
+    width: 50px;
+}
+
+.logosocial:hover {
+    transition: 300ms;
+    transform: scale(1.1)
+}
+
+
+@media (max-width: 850px) {}
