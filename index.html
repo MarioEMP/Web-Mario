@@ -15,13 +15,11 @@
     <!-- PRIMERA VISTA -->
     <header>
         <div class="menu">
-            <img src="img/palmera01.png" id="city">
             <nav>
                 <ul id="navegacion">
                     <li><a href="#tsobre">Sobre mi</a></li>
                     <li><a href="#tconocimientos">Conocimientos</a></li>
                     <li><a href="#tpq">¿Por qué?</a></li>
-                    <li><a href="#tcontacto">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,9 +31,9 @@
             
     </header>
 
-    <!-- WHATSAPP -->
-    <section id="was">
-        <a target="_blank" href="https://wa.me/34656897256"><img src="img/wasap.svg"></a>
+    <!-- LINKEDIN -->
+    <section>
+        <a href="https://www.linkedin.com/in/mario-eduardo-mu%C3%B1oz-p%C3%A9rez-140417a1/" target="_blank"><img src="img/linkedin.png" class="logosocial"></a>
     </section>
 
     <!-- SOBRE MI -->
@@ -50,11 +48,7 @@
                     evolucionado la tecnología de la información.</p>
                     <div id="curriculum">
                         <a href="C:\Users\pc\Desktop\Web Final\archivos\CURRICULUM VITAE Mario E. Muñoz Pérez.pdf" download="CV-Mario E.">
-                            <h4 class="cvtit">Curriculum General</h4>
-                            <img src="img/cv.png" id="cv">
-                        </a>
-                        <a href="C:\Users\pc\Desktop\Web Final\archivos\CURRICULUM VITAE Mario E. Muñoz Pérez.pdf" download="CV-Mario E.">
-                            <h4 class="cvtit">Curriculum Front End</h4>
+                            <h4 class="cvtit">Curriculum Vitae</h4>
                             <img src="img/cv.png" id="cv">
                         </a>
                     </div>
@@ -114,13 +108,22 @@
         <div id="tcontacto">
             <h3>¿Quieres ponerte en contacto conmigo?</h3>
             <div>
-                <a href="https://www.linkedin.com/in/mario-eduardo-mu%C3%B1oz-p%C3%A9rez-140417a1/" target="_blank"><img src="img/linkedin.png" class="logosocial"></a>
-                <a href="mailto:marioemp90@gmail.com"><img src="img/gmail.png" class="logosocial" ></a>
+                <form action="/send-email" method="POST" id="form">
+                    <input id="fnombre" type="text" name="Nombre" placeholder="Nombre" required>
+                    <input id="fcorreo" type="email" name="Correo" placeholder="Correo electrónico" required>
+                    <textarea id="fmensaje" name="Mensaje" placeholder="Escriba aquí su mensaje" required></textarea>
+                    <input type="submit" value="ENVIAR" id="botonform">
+                </form>
             </div>
             
         </div>
+        
     </section>
-    <script src="js/animacion.js"></script>
+
+
+
+
+    <script src="app.js"></script>
 </body>
 
 
