@@ -12,8 +12,21 @@
 </head>
 
 <body>
+
     <!-- PRIMERA VISTA -->
     <header>
+        <div id="divhamburguesa">
+            <div id="barram"></div>
+            <a id="hamburguesa"><img src="img/menu.png"></a>
+            <nav id="navh" class="desactivar-menu">
+                <ul id="listamovil">
+                    <li></li>
+                    <li><a href="#tsobre">Sobre mi</a></li>
+                    <li><a href="#tconocimientos">Conocimientos</a></li>
+                    <li><a href="#tpq">¿Por qué?</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="menu">
             <nav>
                 <ul id="navegacion">
@@ -33,7 +46,8 @@
 
     <!-- LINKEDIN -->
     <section>
-        <a href="https://www.linkedin.com/in/mario-eduardo-mu%C3%B1oz-p%C3%A9rez-140417a1/" target="_blank"><img src="img/linkedin.png" class="logosocial"></a>
+        <a href="https://www.linkedin.com/in/mario-eduardo-mu%C3%B1oz-p%C3%A9rez-140417a1/" target="_blank"><img src="img/linkedin.png" id="logosocial"></a>
+        <a href="https://github.com/MarioEMP" target="_blank"><img src="img/githublogo.webp" id="logogit" ></a>
     </section>
 
     <!-- SOBRE MI -->
@@ -47,7 +61,7 @@
                     <p>Siempre consideré la programación como un futuro en mi carrera, y mas hoy, tal y como ha
                     evolucionado la tecnología de la información.</p>
                     <div id="curriculum">
-                        <a href="C:\Users\pc\Desktop\Web Final\archivos\CURRICULUM VITAE Mario E. Muñoz Pérez.pdf" download="CV-Mario E.">
+                        <a href="C:\Users\pc\Desktop\MiWeb\archivos\CURRICULUM VITAE Mario E. Muñoz Pérez.pdf" target="_blank" download="CV-Mario E.">
                             <h4 class="cvtit">Curriculum Vitae</h4>
                             <img src="img/cv.png" id="cv">
                         </a>
@@ -108,7 +122,7 @@
         <div id="tcontacto">
             <h3>¿Quieres ponerte en contacto conmigo?</h3>
             <div>
-                <form action="/send-email" method="POST" id="form">
+                <form action="enviar.php" method="POST">
                     <input id="fnombre" type="text" name="Nombre" placeholder="Nombre" required>
                     <input id="fcorreo" type="email" name="Correo" placeholder="Correo electrónico" required>
                     <textarea id="fmensaje" name="Mensaje" placeholder="Escriba aquí su mensaje" required></textarea>
@@ -119,8 +133,6 @@
         </div>
         
     </section>
-
-
 
 
     <script src="app.js"></script>

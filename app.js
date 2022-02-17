@@ -1,5 +1,5 @@
 
-    // ANIMACIONES
+// ANIMACIONES
 
     let animacionTitulos, navMenu, animacionLogos;
 
@@ -34,4 +34,25 @@
     }
 
     window.addEventListener("scroll", titulosScroll);
+
+// BOTON HAMBURGUESA
+
+    let boton = document.getElementById("hamburguesa");
+
+    function mostrarMenu() {
+        let menuh = document.getElementById("navh")
+
+        if(menuh.classList.contains("desactivar-menu")){
+            menuh.classList.remove("desactivar-menu");
+            menuh.classList.add("activar-menu");
+        }else{
+            menuh.classList.remove("activar-menu");
+            menuh.classList.add("desactivar-menu");
+        }
+
+    }
+
+    boton.addEventListener("click", mostrarMenu);
+   
+
 
