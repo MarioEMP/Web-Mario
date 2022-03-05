@@ -12,6 +12,7 @@ body {
 
 .contenedor {
     background: rgba(255, 255, 255, 0.911);
+    padding-bottom: 30px;
 }
 
 .titulo {
@@ -86,9 +87,16 @@ body {
     width: 36px;
 }
 
-#navh ul{
+#hamburguesa img:active{
+    transform: scale(1.1)
+}
+
+#navh {
     position: fixed;
-    top: 0;
+    width: 100%;
+}
+
+#navh ul{
     width: 100%;
     padding: 0;
     margin: 0;
@@ -112,16 +120,22 @@ body {
     background: linear-gradient(rgb(220, 84, 84), rgb(245, 151, 96));
 }
 
-#navh li:hover {
-    background: linear-gradient(rgb(146, 146, 146), rgb(255, 255, 255));
+#navh a {
+    padding: 15px 30% 10px 30%;
+    margin: 0;
 }
 
 .activar-menu {
-    display: block;
+    animation: activar-menu 1s;
 }
 
-.desactivar-menu {
-    display: none;
+@keyframes activar-menu {
+    0% {
+        transform: translateY(-300px)
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 
 header {
@@ -146,12 +160,10 @@ header {
     transform: scale(1.1)
 }
 
-#mariom:not(:hover){
-    opacity: 0.4;
-}
 
 #mariom:active {
-    transform: scale(1.2)
+    transform: scale(1.2);
+    box-shadow: 20px 20px 60px black;
 }
 
 
@@ -183,7 +195,7 @@ li {
 
 #navegacion {
     display: none;
-    color: white;
+    color: rgb(255, 233, 214);
     position: fixed;
     font-size: 20px;
     padding-left: 0;
@@ -196,8 +208,7 @@ li {
 #navegacion li:hover {
     display: flex;
     transition: 1000ms;
-    color: black;
-    background: blanchedalmond;
+    background: rgb(255, 233, 214);
 }
 
 #navegacion li:active{
@@ -209,33 +220,39 @@ li {
     color: inherit;
 }
 
+#navegacion a:hover {
+    color: black;
+}
+
 
 /* ENLACES */
 
-#logosocial {
+#logolinkedin {
     position: fixed;
-    top: 1%;
+    top: 6px;
     right: 70px;
     z-index: 20;
-    width: 40px;
+    width: 50px;
 }
     
-.logosocial:hover {
+#logolinkedin:hover {
     transition: 300ms;
-    transform: scale(1.1)
+    filter: invert(1);
+    transform: scale(1.2)
 }
 
 #logogit {
     position: fixed;
-    top: 1%;
+    top: 6px;
     right: 150px;
     z-index: 20;
-    width: 40px;
+    width: 50px;
 }
     
-.logogit:hover {
+#logogit:hover {
     transition: 300ms;
-    transform: scale(1.1)
+    filter: invert(1);
+    transform: scale(1.2)
 }
 
 
@@ -400,6 +417,16 @@ textarea {
         display: none;
     }
 
+    #logolinkedin {
+        right: 30px;  
+        top: 6px;  
+    }
+
+    #logogit {
+        right: 90px;  
+        top: 6px;  
+    }
+
     #mariom:not(:hover){
         opacity: 1;
     }
@@ -422,6 +449,14 @@ textarea {
         flex-direction: column;
         align-items: center;
     }
+}
+
+@media (max-width: 450px) {
+
+    #navh a {
+        padding: 15px 10% 10px 10%;
+    }
+
 }
 
 @media (max-width: 400px) {

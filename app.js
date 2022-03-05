@@ -38,21 +38,28 @@
 // BOTON HAMBURGUESA
 
     let boton = document.getElementById("hamburguesa");
+    let menuh = document.getElementById("navh");
 
     function mostrarMenu() {
-        let menuh = document.getElementById("navh")
-
-        if(menuh.classList.contains("desactivar-menu")){
+        if (menuh.classList.contains("desactivar-menu")){
             menuh.classList.remove("desactivar-menu");
+            menuh.style.opacity = 1;
+            menuh.style.display = "block";
             menuh.classList.add("activar-menu");
-        }else{
-            menuh.classList.remove("activar-menu");
+        return}
+            if (menuh.classList.contains("activar-menu")){
+                menuh.classList.remove("activar-menu");
             menuh.classList.add("desactivar-menu");
-        }
-
+            menuh.style.opacity = 0;
+            menuh.style.display = "none";
     }
-
+}
+ 
+        
     boton.addEventListener("click", mostrarMenu);
+
+
+    
    
 
 
