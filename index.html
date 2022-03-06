@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta charset="utf-8">
     <title>Mario E. Muñoz Pérez - Diseño Web</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
@@ -41,14 +41,16 @@
             <a id="marioboton"><img src="img/mario.png" id="mariom"></a>
             <img src="img/mariologo.png" id="mariologo" class="mariologoan">
         </div>
-            
+
     </header>
 
     <!-- LINKEDIN -->
     <section>
         <ul>
-            <li><a class="social" href="https://www.linkedin.com/in/mario-eduardo-mu%C3%B1oz-p%C3%A9rez-140417a1/" target="_blank"><img id="logolinkedin" src="img/linkedin.svg"></a></li>
-            <li><a class="social" href="https://github.com/MarioEMP" target="_blank"><img id="logogit" src="img/github.svg"></a></li>
+            <li><a class="social" href="https://www.linkedin.com/in/mario-eduardo-mu%C3%B1oz-p%C3%A9rez-140417a1/"
+                    target="_blank"><img id="logolinkedin" src="img/linkedin.svg"></a></li>
+            <li><a class="social" href="https://github.com/MarioEMP" target="_blank"><img id="logogit"
+                        src="img/github.svg"></a></li>
         </ul>
     </section>
 
@@ -56,38 +58,60 @@
     <section class="contenedor">
         <h3 class="titulo" id="tsobre">Sobre mi</h3>
         <div id="psobre">
-                    <p>Soy una persona muy implicada con lo que quiero conseguir. Con estudios en multiples areas desde el desarollo web Front End, la mecánica de
-                        aviones pasando por gestión de almacenes y redacción de procesos producción.</p>
-                    <p>Nunca he dudado a la hora de renovarme y formarme en las disciplinas que me han llamado la
-                        atención para desarrollar mi carrera profesional.</p>
-                    <p>Siempre consideré la programación como un futuro en mi carrera, y mas hoy, tal y como ha
-                    evolucionado la tecnología de la información.</p>
+            <p>Soy una persona muy implicada con lo que quiero conseguir. Con estudios en multiples areas desde el
+                desarollo web Front End, la mecánica de
+                aviones pasando por gestión de almacenes y redacción de procesos producción.</p>
+            <p>Nunca he dudado a la hora de renovarme y formarme en las disciplinas que me han llamado la
+                atención para desarrollar mi carrera profesional.</p>
+            <p>Siempre consideré la programación como un futuro en mi carrera, y mas hoy, tal y como ha
+                evolucionado la tecnología de la información.</p>
         </div>
     </section>
 
     <!-- CONOCIMIENTOS -->
     <section class="contenedor">
-            <h3 class="titulo" id="tconocimientos">Conocimientos</h3>
-            <div id="logosup">
-                <div class="logos">
-                    <img class="logo" id="htmlcss" src="img/CSS3YHTML5.svg">
-                    <p class="pconocimientos">
-                        Maquetacion y diseño web con HTML5 y CSS3, frameworks como Boostrap y preprocesador SASS.
-                    </p>
+        <h3 class="titulo" id="tconocimientos">Conocimientos</h3>
+        <div id="logosup">
+            <div class="logos" id="div-html" onclick="pHtml()" onmouseout="mostrarHtml()"
+                onmouseover="mostrarInfoHtml()">
+                <div class="logos-cont">
+                    <img class="logo" src="img/html.png">
+                    <h2 class="pconocimientos titulo-logo" id="html">HTML5 y CSS3</h2>
+                    <h2 class="pconocimientos" id="info-html" style="display: none">+ INFO</h2>
+                    <img src="img/flechas.png" class="flechas" id="flechas-html">
                 </div>
-                <div class="logos">
-                    <img class="logo" id="js" src="img/jscript.png">
-                    <p class="pconocimientos">
-                        Programación con JavaScript y ES6: var, let y const, bucles e interaciones, funciones y funciones flecha, programacion orientada a objetos, asincronía, métodos...
-                    </p>
-                </div>
-                <div class="logos">
-                    <img class="logo" id="react" src="img/react.png">
-                    <p class="pconocimientos">
-                        Framework React con PROPS y HOOKS.
-                    </p>
-                </div>
+                <p id="p-html" class="p-logo desactivar-html" style="display: none">
+                    Amplios comocimientos de maquetación
+                    y diseño con HTML5, CSS3 y librerías como Boostrap5 con uso de preprocesador SSAS.<br><br>Trabajos
+                    realizados con estas tecnologías se pueden ver en mi <a href="https://github.com/MarioEMP"
+                        target="_blank">GitHub</a>.</p>
             </div>
+            <div class="logos" id="div-js" onclick="pJs()" onmouseout="mostrarJs()" onmouseover="mostrarInfoJs()">
+                <div class="logos-cont">
+                    <img class="logo" src="img/jscript.png">
+                    <h2 class="pconocimientos titulo-logo" id="js">JavaScript</h2>
+                    <h2 class="pconocimientos" id="info-js" style="display: none">+ INFO</h2>
+                    <img src="img/flechas.png" class="flechas" id="flechas-js">
+                </div>
+                <p id="p-js" class="p-logo desactivar-js" style="display: none">
+                    Programación con JavaScript con ES6: animaciones, formularios, eventos y más funcionalidades.<br><br>Trabajos
+                    realizados con estas tecnologías se pueden ver en mi <a href="https://github.com/MarioEMP"
+                        target="_blank">GitHub</a>.</p>
+            </div>
+            <div class="logos" id="div-react" onclick="pReact()" onmouseout="mostrarReact()" onmouseover="mostrarInfoReact()">
+                <div class="logos-cont">
+                    <img class="logo" src="img/react.png">
+                    <h2 class="pconocimientos titulo-logo" id="react">React</h2>
+                    <h2 class="pconocimientos" id="info-react" style="display: none">+ INFO</h2>
+                    <img src="img/flechas.png" class="flechas" id="flechas-react">
+                </div>
+                <p id="p-react" class="p-logo desactivar-react" style="display: none">
+                    Aplicacion de biblioteca React para webs dinámicas, componentes, consumo de API's, buen uso de Hooks y Props.<br><br>Trabajos
+                    realizados con estas tecnologías se pueden ver en mi <a href="https://github.com/MarioEMP"
+                        target="_blank">GitHub</a>.</p>
+            </div>
+        </div>
+        </div>
     </section>
 
     <!-- ¿POR QUÉ? -->
@@ -125,9 +149,9 @@
                     <input type="submit" value="ENVIAR" id="botonform">
                 </form>
             </div>
-            
+
         </div>
-        
+
     </section>
 
 
