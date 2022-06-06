@@ -1,6 +1,23 @@
 
 // ANIMACIONES
 
+const links = document.querySelectorAll(".page-scroll li");
+
+for (const link of links) {
+  link.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop;
+
+  scroll({
+    top: offsetTop,
+    behavior: "smooth"
+  });
+}
+
 let animacionTitulos, navMenu, animacionLogos;
 
 animacionTitulos = document.querySelectorAll(".titulo")
@@ -21,6 +38,9 @@ function titulosScroll() {
             navMenu.style.opacity = 1;
             navMenu.style.display = "flex";
             navMenu.classList.add("mostrarNav");
+            botonTop.style.opacity = 1;
+            botonTop.style.display = "fixed";
+            botonTop.classList.add("mostrarNav");
         }
     }
     for (let i = 0; i < animacionLogos.length; i++) {
@@ -33,6 +53,19 @@ function titulosScroll() {
 }
 
 window.addEventListener("scroll", titulosScroll);
+
+// BARRA DE NAVEGACIÓN
+
+// let botonSobreMi= document.getElementById("boton-sobre-mi");
+// let pixelesSobreMi = document.getElementById("tsobre");
+
+// function goSobreMi() {
+//         requestAnimationFrame(goSobreMi)
+//         scrollTo(0, classList.contains("boton-sobre-mi"))
+// }
+
+// botonSobreMi.addEventListener("click", goSobreMi)
+
 
 // BOTON HAMBURGUESA
 
@@ -55,8 +88,21 @@ function mostrarMenu() {
     }
 }
 
-
 boton.addEventListener("click", mostrarMenu);
+
+// BOTON TOP
+
+let botonTop = document.getElementById("boton-top");
+let pixelesInicio = () => document.documentElement.scrollTop || document.body.scrollTop;
+
+function goTop() {
+    if (pixelesInicio() > 0){
+        requestAnimationFrame(goTop)
+        scrollTo(0, pixelesInicio() - (pixelesInicio() / 20))
+    }
+}
+
+botonTop.addEventListener("click", goTop)
 
 
 // CONOCIMIENTOS

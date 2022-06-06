@@ -20,7 +20,7 @@
             <a id="hamburguesa"><img src="img/menu.png"></a>
             <nav id="navh" style="opacity: 0" onclick="mostrarMenu()" class="desactivar-menu">
                 <ul id="listamovil">
-                    <li></li>
+                    <li style="max-height: 5px;"></li>
                     <li><a class="boton-menu" href="#tsobre">Sobre mi</a></li>
                     <li><a class="boton-menu" href="#tconocimientos">Conocimientos</a></li>
                     <li><a class="boton-menu" href="#tpq">¿Por qué?</a></li>
@@ -29,23 +29,21 @@
         </div>
         <div class="menu">
             <nav>
-                <ul id="navegacion">
-                    <li><a href="#tsobre">Sobre mi</a></li>
-                    <li><a href="#tconocimientos">Conocimientos</a></li>
-                    <li><a href="#tpq">¿Por qué?</a></li>
+                <ul id="navegacion" class="page-scroll">
+                    <li class="boton-sobre-mi" href="#tsobre">Sobre mi</li>
+                    <li id="boton-conocimientos" href="#tconocimientos">Conocimientos</li>
+                    <li id="boton-pq" href="#tpq">¿Por qué?</li>
                 </ul>
             </nav>
         </div>
-
-        <div class="marioimg">
-            <a id="marioboton"><img src="img/mario.png" id="mariom"></a>
-            <img src="img/mariologo.png" id="mariologo" class="mariologoan">
-        </div>
-
     </header>
 
-    <!-- LINKEDIN -->
-    <section>
+
+
+    <div><img src="img/flecha-top.png" id="boton-top" style="opacity: 0;"></div>
+
+    <!-- ENLACES -->
+    <section class="contenedor">
         <ul>
             <li><a class="social" href="https://www.linkedin.com/in/mario-eduardo-mu%C3%B1oz-p%C3%A9rez-140417a1/"
                     target="_blank"><img id="logolinkedin" src="img/linkedin.svg"></a></li>
@@ -54,9 +52,13 @@
         </ul>
     </section>
 
+        <!-- INICIO -->
+    
+
     <!-- SOBRE MI -->
     <section class="contenedor">
-        <h3 class="titulo" id="tsobre">Sobre mi</h3>
+        <h3 class="titulo-s" id="tsobre">Sobre mi</h3>
+        <img src="img/mario.png" id="mariom">
         <div id="psobre">
             <p>Soy una persona muy implicada con lo que quiero conseguir. Con estudios en multiples areas desde el
                 desarollo web Front End, la mecánica de
@@ -94,7 +96,7 @@
                     <img src="img/flechas.png" class="flechas" id="flechas-js">
                 </div>
                 <p id="p-js" class="p-logo desactivar-js" style="display: none">
-                    Programación con JavaScript con ES6: animaciones, formularios, eventos y más funcionalidades.<br><br>Trabajos
+                    Programación con JavaScript con ES6: animaciones, formularios, eventos, API's y más funcionalidades.<br><br>Trabajos
                     realizados con estas tecnologías se pueden ver en mi <a href="https://github.com/MarioEMP"
                         target="_blank">GitHub</a>.</p>
             </div>
@@ -106,7 +108,7 @@
                     <img src="img/flechas.png" class="flechas" id="flechas-react">
                 </div>
                 <p id="p-react" class="p-logo desactivar-react" style="display: none">
-                    Aplicacion de biblioteca React para webs dinámicas, componentes, consumo de API's, buen uso de Hooks y Props.<br><br>Trabajos
+                    Aplicacion de biblioteca React para webs dinámicas, componentes, buen uso de Hooks y Props.<br><br>Trabajos
                     realizados con estas tecnologías se pueden ver en mi <a href="https://github.com/MarioEMP"
                         target="_blank">GitHub</a>.</p>
             </div>
